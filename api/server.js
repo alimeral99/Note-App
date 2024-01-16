@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const noteRouter = require("./routes/note");
 require("dotenv").config();
 
 const app = express();
@@ -13,6 +14,8 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
+
+app.use("/note", noteRouter);
 
 app.use("/", (req, res) => {
   res.send("heloo server");
