@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.send("Birds home page");
+  res.send("hello note");
 });
 
 module.exports = router;

@@ -15,6 +15,8 @@ mongoose
     console.log(err);
   });
 
+app.use(express.json());
+
 app.use("/note", noteRouter);
 
 app.use("/", (req, res) => {
