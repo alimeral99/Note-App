@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const { getAllNote } = require("../controllers/note.controllers");
 
-router.get("/", (req, res) => {
-  res.send("hello note");
-});
+router.get("/", getAllNote);
 
 module.exports = router;
